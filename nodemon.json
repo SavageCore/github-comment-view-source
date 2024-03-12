@@ -1,0 +1,7 @@
+{
+    "watch": [
+        "main.ts"
+    ],
+    "ext": "ts",
+    "exec": "pnpm build"
+}

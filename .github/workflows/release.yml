@@ -1,0 +1,37 @@
+name: Build and Deploy
+on:
+  push:
+    tags:
+      - v*
+permissions:
+  contents: write
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Install pnpm 📦
+        uses: pnpm/action-setup@v3
+        with:
+          version: 'latest'
+
+      - name: Setup Node.js 🛠️
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: 'pnpm'
+
+      - name: Install and Build 🔧
+        run: |
+          pnpm install
+          pnpm build
+
+      - name: Create Release 🚀
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            dist/github-comment-view-source.user.js
+            dist/github-comment-view-source.meta.js
+            LICENSE
