@@ -12,7 +12,7 @@ Click [here](https://github.com/SavageCore/github-comment-view-source/releases/l
 
 ## Preview
 
-https://github.com/SavageCore/github-comment-view-source/assets/171312/9370b7d0-1176-4c92-a9e8-ff4ed065f629
+https://github.com/SavageCore/github-comment-view-source/assets/171312/f9f7c7d2-ce0f-4a5d-847e-af401ae7fee3
 
 ## License
 
