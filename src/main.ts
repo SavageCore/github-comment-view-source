@@ -107,10 +107,11 @@ function addSourceViewButton(detailsMenu: Element, issue: any, comments: any): v
             } else {
                 button.innerText = 'View original';
                 const body = detectIssueOrCommentAndFetchBody(detailsMenu, issue, comments);
-                const sourceCode = replaceEscapeSequences(body);
+                const pre = document.createElement('pre');
+                pre.textContent = body;
 
                 // Replace with the source code
-                commentBody.innerHTML = sourceCode;
+                commentBody.innerHTML = pre.outerHTML;
             }
 
             // Toggle the flag
@@ -141,14 +142,6 @@ function detectIssueOrCommentAndFetchBody(detailsMenu: Element, issue: any, comm
     }
 
     return '';
-}
-
-function replaceEscapeSequences(sourceCode: string): string {
-    return sourceCode
-        .replace(/(?:\r\n|\r|\n)/g, '<br>') // Replace carriage returns with <br>
-        .replace(/(?:\t)/g, '&nbsp;&nbsp;&nbsp;&nbsp;') // Replace tabs with four non-breaking spaces
-        .replace(/(?:\f)/g, '<br>') // Form feed, treated as a new line in HTML
-        .replace(/(?:\v)/g, '<br>'); // Vertical tab, treated as a new line in HTML
 }
 
 const showToast = (message: string, timeout = 5000) => {
