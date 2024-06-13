@@ -35,3 +35,4 @@ jobs:
             dist/github-comment-view-source.user.js
             dist/github-comment-view-source.meta.js
             LICENSE
+          generate_release_notes: true
