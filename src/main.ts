@@ -82,7 +82,7 @@ function addSourceViewButton(detailsMenu: Element, issue: any, comments: any): v
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'dropdown-item btn-link';
-    button.innerText = 'View Source';
+    button.innerText = 'View source';
     // Initialize a flag to keep track of the toggle state
     let isSourceView = false;
 
@@ -102,10 +102,10 @@ function addSourceViewButton(detailsMenu: Element, issue: any, comments: any): v
             // Toggle the content based on `isSourceView`
             if (isSourceView) {
                 // Switch back to the original content
-                button.innerText = 'View Source';
+                button.innerText = 'View source';
                 commentBody.innerHTML = originalContent;
             } else {
-                button.innerText = 'View Original';
+                button.innerText = 'View original';
                 const body = detectIssueOrCommentAndFetchBody(detailsMenu, issue, comments);
                 const sourceCode = replaceEscapeSequences(body);
 
