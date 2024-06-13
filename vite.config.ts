@@ -18,7 +18,7 @@ export default defineConfig({
         version,
         license: 'Unlicense',
         author: 'SavageCore',
-        description: 'A template for userscripts',
+        description: 'A userscript to view the source of a comment on GitHub',
         updateURL: 'https://github.com/SavageCore/github-comment-view-source/releases/latest/download/github-comment-view-source.meta.js',
         downloadURL: 'https://github.com/SavageCore/github-comment-view-source/releases/latest/download/github-comment-view-source.user.js',
         supportURL: 'https://github.com/SavageCore/github-comment-view-source/issues',
