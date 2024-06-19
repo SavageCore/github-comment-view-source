@@ -24,7 +24,7 @@ const main = async () => {
                 <h3 class="Box-title">Enter GitHub Token</h3>
             </div>
             <div class="Box-body">
-                <p>Please enter your GitHub token (You can generate one <a href="https://github.com/settings/tokens/new?description=github-comment-view-source&scopes=repo,delete_repo,read:project" target="_blank">here</a>)</p>
+                <p>Please enter your GitHub token (You can generate one <a href="https://github.com/settings/tokens/new?description=github-comment-view-source&scopes=repo" target="_blank">here</a>)</p>
                 <input type="text" class="form-control" id="githubTokenInput" placeholder="GitHub Token">
             </div>
             <div class="Box-footer">
