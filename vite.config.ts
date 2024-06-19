@@ -11,8 +11,7 @@ export default defineConfig({
         icon: 'https://savagecore.uk/img/userscript_icon.png',
         namespace: 'savagecore.uk',
         match: [
-          'https://github.com/*/*/issues/*',
-          'https://github.com/*/*/pull/*',
+          'https://github.com/*',
         ],
         "run-at": "document-idle",
         version,
