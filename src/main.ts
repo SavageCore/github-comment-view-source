@@ -1,5 +1,8 @@
 import { GM } from "$";
 
+let observer: MutationObserver;
+let lastURL = '';
+
 const main = async () => {
     // Get the issue number from the URL
     const username = window.location.pathname.split('/')[1];
@@ -171,4 +174,39 @@ const showToast = (message: string, timeout = 5000) => {
     }, timeout);
 };
 
-main();
+const handlePageChange = () => {
+    const currentURL = window.location.href;
+
+    if (currentURL !== lastURL && window.location.pathname.match(/\/.*\/.*\/(issues|pull)\/\d+/)) {
+        main();
+
+        lastURL = currentURL;
+
+        if (observer) {
+            observer.disconnect();
+        }
+
+        setTimeout(() => {
+            if (observer) {
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true,
+                    attributes: true,
+                });
+            }
+        }, 1000);
+    }
+};
+
+handlePageChange();
+
+observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+        if (mutation.type === 'childList' || mutation.type === 'attributes') {
+            handlePageChange();
+            break;
+        }
+    }
+});
+
+observer.observe(document.body, { childList: true, subtree: true, attributes: true });
