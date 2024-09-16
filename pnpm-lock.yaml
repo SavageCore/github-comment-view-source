@@ -15,11 +15,11 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
       vite:
-        specifier: ^5.4.3
-        version: 5.4.3
+        specifier: ^5.4.5
+        version: 5.4.5
       vite-plugin-monkey:
         specifier: ^4.0.6
-        version: 4.0.6(vite@5.4.3)
+        version: 4.0.6(vite@5.4.5)
 
 packages:
 
@@ -596,8 +596,8 @@ packages:
       vite:
         optional: true
 
-  vite@5.4.3:
-    resolution: {integrity: sha512-IH+nl64eq9lJjFqU+/yrRnrHPVTlgy42/+IzbOdaFDVlyLgI/wDlf+FCobXLX1cT0X5+7LMyH1mIy2xJdLfo8Q==}
+  vite@5.4.5:
+    resolution: {integrity: sha512-pXqR0qtb2bTwLkev4SE3r4abCNioP3GkjvIDLlzziPpXtHgiJIjuKl+1GN6ESOT3wMjG3JTeARopj2SwYaHTOA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1103,7 +1103,7 @@ snapshots:
 
   untildify@4.0.0: {}
 
-  vite-plugin-monkey@4.0.6(vite@5.4.3):
+  vite-plugin-monkey@4.0.6(vite@5.4.5):
     dependencies:
       acorn-walk: 8.3.3
       cross-spawn: 7.0.3
@@ -1115,9 +1115,9 @@ snapshots:
       picocolors: 1.0.1
       systemjs: 6.15.1
     optionalDependencies:
-      vite: 5.4.3
+      vite: 5.4.5
 
-  vite@5.4.3:
+  vite@5.4.5:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.45
